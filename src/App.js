@@ -3,20 +3,26 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import HomePage from "./pages/HomePage";
-import RegionPage from "./pages/RegionPage";
+import TopStoriesPage from "./pages/TopStoriesPage";
+import MostReadPage from "./pages/MostReadPage";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navbar";
+import ScrollButton from "./components/ScrollButton";
+import { Content, Heading } from "./components/Styles";
 
 function App() {
   return (
     <Router>
       <Navigation />
+
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="/:region" element={<RegionPage />} />
+        <Route exact path="/" element={<TopStoriesPage />} />
+        <Route path="/top-stories" element={<TopStoriesPage />} />
+        <Route path="/most-read" element={<MostReadPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Content />
+      <ScrollButton />
     </Router>
   );
 }
