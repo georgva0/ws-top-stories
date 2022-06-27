@@ -5,8 +5,8 @@ export default class Subnav extends React.Component {
   render() {
     return (
       <div>
-        <Nav pills justified className="mb-1 mt-1">
-          <NavLink className="text-danger" href="#africa" ml-auto>
+        <Nav pills justified>
+          <NavLink className="text-danger" href="#africa">
             Africa
           </NavLink>
           <NavLink className="text-danger" href="#asia-central">
