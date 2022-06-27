@@ -1,4 +1,3 @@
-import "dotenv/config";
 import React, { useState, useEffect } from "react";
 import Loader from "../components/Loader";
 import Subnav from "../components/Subnav";
@@ -21,7 +20,7 @@ const MostReadPage = () => {
 
   useEffect(() => {
     fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/1ZsXT1Un8t8sZw5tgYYej_o9yyjN-YCi09Owy1joACAw/values/rawData!A1:J40?key=${process.env.GOOGLE_CLOUD_KEY}`
+      `https://sheets.googleapis.com/v4/spreadsheets/1ZsXT1Un8t8sZw5tgYYej_o9yyjN-YCi09Owy1joACAw/values/rawData!A1:J40?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {

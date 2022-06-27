@@ -1,4 +1,3 @@
-import "dotenv/config";
 import React, { useState, useEffect } from "react";
 import Loader from "../components/Loader";
 import Subnav from "../components/Subnav";
@@ -21,7 +20,7 @@ const TopStoriesPage = () => {
 
   useEffect(() => {
     fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/rawData!A1:J40?key=${process.env.GOOGLE_CLOUD_KEY}`
+      `https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/rawData!A1:J40?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {
