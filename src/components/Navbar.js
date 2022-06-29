@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import {
   Navbar,
@@ -12,6 +13,12 @@ import {
 } from "reactstrap";
 
 const Navigation = () => {
+  const location = useLocation();
+  const [url, setUrl] = useState(null);
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location]);
+
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
@@ -24,10 +31,20 @@ const Navigation = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ms-auto" navbar>
             <NavItem>
-              <NavLink href="/top-stories">TOP STORIES</NavLink>
+              <NavLink
+                href="/top-stories"
+                className={url === "/top-stories" ? " active" : ""}
+              >
+                TOP STORIES
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/most-read">MOST READ</NavLink>
+              <NavLink
+                href="/most-read"
+                className={url === "/most-read" ? " active" : ""}
+              >
+                MOST READ
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>

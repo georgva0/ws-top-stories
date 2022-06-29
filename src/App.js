@@ -8,7 +8,7 @@ import MostReadPage from "./pages/MostReadPage";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navbar";
 import ScrollButton from "./components/ScrollButton";
-import { Content, Heading } from "./components/Styles";
+import { Content } from "./components/Styles";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Navigation />
 
       <Routes>
-        <Route exact path="/" element={<TopStoriesPage />} />
+        <Route path="/" element={<TopStoriesPage />} />
         <Route path="/top-stories" element={<TopStoriesPage />} />
         <Route path="/most-read" element={<MostReadPage />} />
         <Route path="*" element={<NotFound />} />
