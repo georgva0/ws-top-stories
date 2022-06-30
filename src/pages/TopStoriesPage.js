@@ -98,12 +98,12 @@ const TopStoriesPage = () => {
 
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
-                        {article[9]}
                         {article[3] && (
                           <Badge ml-3 color="danger">
                             {article[3]}
                           </Badge>
                         )}
+                        {article[9]}
                       </CardTitle>
                       <CardSubtitle className="mb-2 text-muted" tag="h6">
                         {article[2]}
