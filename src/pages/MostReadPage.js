@@ -11,7 +11,6 @@ import {
   Row,
   Col,
   Badge,
-  Button,
 } from "reactstrap";
 
 const MostReadPage = () => {
@@ -39,17 +38,6 @@ const MostReadPage = () => {
       <>
         <Row>
           <Col md="12">
-            {/* <Button color="secondary" className="mt-4 disabled">
-              <strong>Most read</strong> articles on
-              <a
-                href="https://www.bbc.co.uk/ws/languages"
-                className="text-decoration-none underline"
-              >
-                {" "}
-                BBC World Service
-              </a>{" "}
-              languages websites. Titles are machine-translated.
-            </Button> */}
             <h5 className="mt-4 p-2 text-white bg-secondary">
               <strong>Most read</strong> articles on
               <a
@@ -91,6 +79,7 @@ const MostReadPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -136,6 +125,7 @@ const MostReadPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -186,6 +176,7 @@ const MostReadPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -240,6 +231,7 @@ const MostReadPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -288,6 +280,7 @@ const MostReadPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -333,6 +326,7 @@ const MostReadPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -378,6 +372,7 @@ const MostReadPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>

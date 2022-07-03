@@ -11,7 +11,6 @@ import {
   Row,
   Col,
   Badge,
-  Button,
 } from "reactstrap";
 
 const TopStoriesPage = () => {
@@ -79,6 +78,7 @@ const TopStoriesPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -131,6 +131,7 @@ const TopStoriesPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -188,6 +189,7 @@ const TopStoriesPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -249,6 +251,7 @@ const TopStoriesPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -304,6 +307,7 @@ const TopStoriesPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -356,6 +360,7 @@ const TopStoriesPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>
@@ -408,6 +413,7 @@ const TopStoriesPage = () => {
                 ) {
                   return article;
                 }
+                return false;
               })
               .map((article, key) => (
                 <Col key={key}>

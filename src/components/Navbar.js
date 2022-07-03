@@ -46,6 +46,14 @@ const Navigation = () => {
                 MOST READ
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink
+                href="/emerging-stories"
+                className={url === "/emerging-stories" ? " active" : ""}
+              >
+                EMERGING STORIES
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
