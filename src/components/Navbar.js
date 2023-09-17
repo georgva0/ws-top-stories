@@ -30,7 +30,7 @@ const Navigation = () => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ms-auto" navbar>
-            <NavItem>
+            {/* <NavItem>
               <NavLink
                 href="/top-stories"
                 className={url === "/top-stories" ? " active" : ""}
@@ -53,7 +53,7 @@ const Navigation = () => {
               >
                 EMERGING STORIES
               </NavLink>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Navbar>

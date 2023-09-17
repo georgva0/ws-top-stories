@@ -19,7 +19,8 @@ const TopStoriesPage = () => {
 
   useEffect(() => {
     fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/rawData!A1:J40?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
+      // `https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/rawData!A1:J40?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
+      `https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/topItems!A2:J41?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -46,7 +47,7 @@ const TopStoriesPage = () => {
               >
                 BBC World Service
               </a>{" "}
-              editorial teams. Titles are machine-translated.
+              editorial teams (Live events are not currently included). Titles are machine-translated.
             </h5>
           </Col>
         </Row>
@@ -64,17 +65,17 @@ const TopStoriesPage = () => {
             articles.values
               .filter((article) => {
                 if (
-                  article[5].includes("afaanoromoo") ||
-                  article[5].includes("amharic") ||
-                  article[5].includes("afrique") ||
-                  article[5].includes("gahuza") ||
-                  article[5].includes("hausa") ||
-                  article[5].includes("igbo") ||
-                  article[5].includes("pidgin") ||
-                  article[5].includes("somali") ||
-                  article[5].includes("swahili") ||
-                  article[5].includes("tigrinya") ||
-                  article[5].includes("yoruba")
+                  article[0].includes("afaanoromoo") ||
+                  article[0].includes("amharic") ||
+                  article[0].includes("afrique") ||
+                  article[0].includes("gahuza") ||
+                  article[0].includes("hausa") ||
+                  article[0].includes("igbo") ||
+                  article[0].includes("pidgin") ||
+                  article[0].includes("somali") ||
+                  article[0].includes("swahili") ||
+                  article[0].includes("tigrinya") ||
+                  article[0].includes("yoruba")
                 ) {
                   return article;
                 }
@@ -87,10 +88,10 @@ const TopStoriesPage = () => {
                     <Badge color="secondary" className="mb-2">
                       {article[6].toUpperCase()}
                     </Badge>
-                    <a href={article[5]} className="stretched-link">
+                    <a href={article[0]} className="stretched-link">
                       <CardImg
                         alt={article[0]}
-                        src={article[4]}
+                        src={article[5]}
                         top
                         width="100%"
                       />
@@ -98,15 +99,15 @@ const TopStoriesPage = () => {
 
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
-                        {article[3] && (
+                        {article[1] && (
                           <Badge ml-3 color="danger">
-                            {article[3]}
+                            {article[1]}
                           </Badge>
                         )}
                         {article[9]}
                       </CardTitle>
                       <CardSubtitle className="mb-2 text-muted" tag="h6">
-                        {article[2]}
+                        {article[7]}
                       </CardSubtitle>
                     </CardBody>
                   </Card>
@@ -126,8 +127,8 @@ const TopStoriesPage = () => {
             articles.values
               .filter((article) => {
                 if (
-                  article[5].includes("kyrgyz") ||
-                  article[5].includes("uzbek")
+                  article[0].includes("kyrgyz") ||
+                  article[0].includes("uzbek")
                 ) {
                   return article;
                 }
@@ -140,10 +141,10 @@ const TopStoriesPage = () => {
                     <Badge color="secondary" className="mb-2">
                       {article[6].toUpperCase()}
                     </Badge>
-                    <a href={article[5]} className="stretched-link">
+                    <a href={article[0]} className="stretched-link">
                       <CardImg
                         alt={article[0]}
-                        src={article[4]}
+                        src={article[5]}
                         top
                         width="100%"
                       />
@@ -152,14 +153,14 @@ const TopStoriesPage = () => {
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
                         {article[9]}
-                        {article[3] && (
+                        {article[1] && (
                           <Badge ml-3 color="danger">
-                            {article[3]}
+                            {article[1]}
                           </Badge>
                         )}
                       </CardTitle>
                       <CardSubtitle className="mb-2 text-muted" tag="h6">
-                        {article[2]}
+                        {article[7]}
                       </CardSubtitle>
                     </CardBody>
                   </Card>
@@ -179,13 +180,13 @@ const TopStoriesPage = () => {
             articles.values
               .filter((article) => {
                 if (
-                  article[5].includes("burmese") ||
-                  article[5].includes("indonesia") ||
-                  article[5].includes("japanese") ||
-                  article[5].includes("korean") ||
-                  article[5].includes("thai") ||
-                  article[5].includes("vietnamese") ||
-                  article[5].includes("zhongwen")
+                  article[0].includes("burmese") ||
+                  article[0].includes("indonesia") ||
+                  article[0].includes("japanese") ||
+                  article[0].includes("korean") ||
+                  article[0].includes("thai") ||
+                  article[0].includes("vietnamese") ||
+                  article[0].includes("zhongwen")
                 ) {
                   return article;
                 }
@@ -198,10 +199,10 @@ const TopStoriesPage = () => {
                     <Badge color="secondary" className="mb-2">
                       {article[6].toUpperCase()}
                     </Badge>
-                    <a href={article[5]} className="stretched-link">
+                    <a href={article[0]} className="stretched-link">
                       <CardImg
                         alt={article[0]}
-                        src={article[4]}
+                        src={article[5]}
                         top
                         width="100%"
                       />
@@ -209,15 +210,15 @@ const TopStoriesPage = () => {
 
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
-                        {article[3] && (
+                        {article[1] && (
                           <Badge ml-3 color="danger">
-                            {article[3]}
+                            {article[1]}
                           </Badge>
                         )}
                         {article[9]}{" "}
                       </CardTitle>
                       <CardSubtitle className="mb-2 text-muted" tag="h6">
-                        {article[2]}
+                        {article[7]}
                       </CardSubtitle>
                     </CardBody>
                   </Card>
@@ -237,17 +238,17 @@ const TopStoriesPage = () => {
             articles.values
               .filter((article) => {
                 if (
-                  article[5].includes("bengali") ||
-                  article[5].includes("gujarati") ||
-                  article[5].includes("hindi") ||
-                  article[5].includes("marathi") ||
-                  article[5].includes("nepali") ||
-                  article[5].includes("pashto") ||
-                  article[5].includes("punjabi") ||
-                  article[5].includes("sinhala") ||
-                  article[5].includes("tamil") ||
-                  article[5].includes("telugu") ||
-                  article[5].includes("urdu")
+                  article[0].includes("bengali") ||
+                  article[0].includes("gujarati") ||
+                  article[0].includes("hindi") ||
+                  article[0].includes("marathi") ||
+                  article[0].includes("nepali") ||
+                  article[0].includes("pashto") ||
+                  article[0].includes("punjabi") ||
+                  article[0].includes("sinhala") ||
+                  article[0].includes("tamil") ||
+                  article[0].includes("telugu") ||
+                  article[0].includes("urdu")
                 ) {
                   return article;
                 }
@@ -260,10 +261,10 @@ const TopStoriesPage = () => {
                     <Badge color="secondary" className="mb-2">
                       {article[6].toUpperCase()}
                     </Badge>
-                    <a href={article[5]} className="stretched-link">
+                    <a href={article[0]} className="stretched-link">
                       <CardImg
                         alt={article[0]}
-                        src={article[4]}
+                        src={article[5]}
                         top
                         width="100%"
                       />
@@ -271,15 +272,15 @@ const TopStoriesPage = () => {
 
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
-                        {article[3] && (
+                        {article[1] && (
                           <Badge ml-3 color="danger">
-                            {article[3]}
+                            {article[1]}
                           </Badge>
                         )}
                         {article[9]}
                       </CardTitle>
                       <CardSubtitle className="mb-2 text-muted" tag="h6">
-                        {article[2]}
+                        {article[7]}
                       </CardSubtitle>
                     </CardBody>
                   </Card>
@@ -299,11 +300,11 @@ const TopStoriesPage = () => {
             articles.values
               .filter((article) => {
                 if (
-                  article[5].includes("azeri") ||
-                  article[5].includes("russian") ||
-                  article[5].includes("serbian") ||
-                  article[5].includes("turkce") ||
-                  article[5].includes("ukrainian")
+                  article[0].includes("azeri") ||
+                  article[0].includes("russian") ||
+                  article[0].includes("serbian") ||
+                  article[0].includes("turkce") ||
+                  article[0].includes("ukrainian")
                 ) {
                   return article;
                 }
@@ -316,10 +317,10 @@ const TopStoriesPage = () => {
                     <Badge color="secondary" className="mb-2">
                       {article[6].toUpperCase()}
                     </Badge>
-                    <a href={article[5]} className="stretched-link">
+                    <a href={article[0]} className="stretched-link">
                       <CardImg
                         alt={article[0]}
-                        src={article[4]}
+                        src={article[5]}
                         top
                         width="100%"
                       />
@@ -327,15 +328,15 @@ const TopStoriesPage = () => {
 
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
-                        {article[3] && (
+                        {article[1] && (
                           <Badge ml-3 color="danger">
-                            {article[3]}
+                            {article[1]}
                           </Badge>
                         )}
                         {article[9]}{" "}
                       </CardTitle>
                       <CardSubtitle className="mb-2 text-muted" tag="h6">
-                        {article[2]}
+                        {article[7]}
                       </CardSubtitle>
                     </CardBody>
                   </Card>
@@ -355,8 +356,8 @@ const TopStoriesPage = () => {
             articles.values
               .filter((article) => {
                 if (
-                  article[5].includes("portuguese") ||
-                  article[5].includes("mundo")
+                  article[0].includes("portuguese") ||
+                  article[0].includes("mundo")
                 ) {
                   return article;
                 }
@@ -369,10 +370,10 @@ const TopStoriesPage = () => {
                     <Badge color="secondary" className="mb-2">
                       {article[6].toUpperCase()}
                     </Badge>
-                    <a href={article[5]} className="stretched-link">
+                    <a href={article[0]} className="stretched-link">
                       <CardImg
                         alt={article[0]}
-                        src={article[4]}
+                        src={article[5]}
                         top
                         width="100%"
                       />
@@ -380,15 +381,16 @@ const TopStoriesPage = () => {
 
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
-                        {article[9]}
-                        {article[3] && (
+                        
+                        {article[1] && (
                           <Badge ml-3 color="danger">
-                            {article[3]}
+                            {article[1]}
                           </Badge>
                         )}
+                        {article[9]}
                       </CardTitle>
                       <CardSubtitle className="mb-2 text-muted" tag="h6">
-                        {article[2]}
+                        {article[7]}
                       </CardSubtitle>
                     </CardBody>
                   </Card>
@@ -408,8 +410,8 @@ const TopStoriesPage = () => {
             articles.values
               .filter((article) => {
                 if (
-                  article[5].includes("arabic") ||
-                  article[5].includes("persian")
+                  article[0].includes("arabic") ||
+                  article[0].includes("persian")
                 ) {
                   return article;
                 }
@@ -422,10 +424,10 @@ const TopStoriesPage = () => {
                     <Badge color="secondary" className="mb-2">
                       {article[6].toUpperCase()}
                     </Badge>
-                    <a href={article[5]} className="stretched-link">
+                    <a href={article[0]} className="stretched-link">
                       <CardImg
                         alt={article[0]}
-                        src={article[4]}
+                        src={article[5]}
                         top
                         width="100%"
                       />
@@ -433,15 +435,16 @@ const TopStoriesPage = () => {
 
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
-                        {article[9]}
-                        {article[3] && (
+                        
+                        {article[1] && (
                           <Badge ml-3 color="danger">
-                            {article[3]}
+                            {article[1]}
                           </Badge>
                         )}
+                        {article[9]}
                       </CardTitle>
                       <CardSubtitle className="mb-2 text-muted" tag="h6">
-                        {article[2]}
+                        {article[7]}
                       </CardSubtitle>
                     </CardBody>
                   </Card>
