@@ -17,6 +17,8 @@ const TopStoriesPage = () => {
   const [articles, setArticles] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
+  //switching source to adapt to Tipo migration
+
   useEffect(() => {
     fetch(
       // `https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/rawData!A1:J40?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
