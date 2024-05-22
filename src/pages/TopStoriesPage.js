@@ -21,8 +21,8 @@ const TopStoriesPage = () => {
 
   useEffect(() => {
     fetch(
-      // `https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/rawData!A1:J40?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
-      `https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/topItems!A2:J41?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
+      `https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/rawData!A1:J40?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
+      //`https://sheets.googleapis.com/v4/spreadsheets/1eX_45LxEqExv5QIu2fbLR7iXuMp1u7Au3V9nGwDv8vU/values/topItems!A2:J41?key=${process.env.REACT_APP_GOOGLE_CLOUD_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -49,7 +49,7 @@ const TopStoriesPage = () => {
               >
                 BBC World Service
               </a>{" "}
-              editorial teams (Live events are not currently included). Titles are machine-translated.
+              editorial teams. Titles are machine-translated.
             </h5>
           </Col>
         </Row>
@@ -383,7 +383,6 @@ const TopStoriesPage = () => {
 
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
-                        
                         {article[1] && (
                           <Badge ml-3 color="danger">
                             {article[1]}
@@ -437,7 +436,6 @@ const TopStoriesPage = () => {
 
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
-                        
                         {article[1] && (
                           <Badge ml-3 color="danger">
                             {article[1]}
