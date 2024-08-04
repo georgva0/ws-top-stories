@@ -37,13 +37,21 @@ const Navigation = () => {
               >
                 TOP STORIES
               </NavLink>
-            </NavItem>
-            <NavItem>
+            </NavItem> */}
+            {/* <NavItem>
               <NavLink
                 href="/most-read"
                 className={url === "/most-read" ? " active" : ""}
               >
                 MOST READ
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                href="/emerging-stories"
+                className={url === "/emerging-stories" ? " active" : ""}
+              >
+                EMERGING STORIES
               </NavLink>
             </NavItem>
             <NavItem>
