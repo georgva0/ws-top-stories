@@ -135,6 +135,10 @@ const servicesURL = [
     serviceName: "Azeri",
   },
   {
+    serviceUrl: "polska",
+    serviceName: "Polska",
+  },
+  {
     serviceUrl: "russian",
     serviceName: "Russian",
   },

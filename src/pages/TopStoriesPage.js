@@ -303,6 +303,7 @@ const TopStoriesPage = () => {
               .filter((article) => {
                 if (
                   article[0].includes("azeri") ||
+                  article[0].includes("polska") ||
                   article[0].includes("russian") ||
                   article[0].includes("serbian") ||
                   article[0].includes("turkce") ||
