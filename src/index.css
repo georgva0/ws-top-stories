@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
 
 body {
   margin: 0;
-  font-size: 18px;
-  font-family: "Source Serif Pro", serif;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  color: #18252d;
+  background: #f4f1eb;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,9 +21,184 @@ body {
   border-bottom: 1px dotted rgb(139, 7, 7);
 }
 
+.content-container {
+  padding-bottom: 4rem;
+}
+
+.site-navbar {
+  margin: 0.75rem auto 0;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #d9dfda;
+  background: #f4f1eb;
+}
+
+.brand-mark {
+  display: inline-grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-right: 0.65rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #fffdf9;
+  background: #8a332c;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.brand-name {
+  color: #183f46;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.content-container > .row:first-child h5 {
+  margin-top: 1.25rem !important;
+  padding: 1rem 1.2rem !important;
+  border-left: 4px solid #8a332c;
+  border-radius: 0 5px 5px 0;
+  color: #fffdf9 !important;
+  background: #183f46 !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.content-container > .row:first-child h5 strong {
+  font-weight: 700;
+}
+
+.content-container h3 {
+  margin: 3rem 0 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #cbd2ce;
+  color: #183f46;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
+  letter-spacing: 0;
+  scroll-margin-top: 8rem;
+}
+
+.content-container .row.mt-3 {
+  row-gap: 2.25rem;
+}
+
+.content-container .card {
+  height: 100%;
+  padding: 0.65rem;
+  border-radius: 6px;
+  background: #fffdf9;
+  box-shadow: 0 8px 22px rgba(24, 63, 70, 0.07);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.content-container .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(24, 63, 70, 0.14);
+}
+
+.content-container .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container .card-title {
+  color: #18252d;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.content-container .card-subtitle {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.content-container .badge {
+  align-self: flex-start;
+  border-radius: 3px;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+.card-img-top {
+  aspect-ratio: 16 / 10;
+  height: auto;
+  border-radius: 3px;
+}
+
+.section-nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #d9dfda;
+  border-radius: 6px;
+  background: rgba(255, 253, 249, 0.94);
+  box-shadow: 0 8px 18px rgba(24, 63, 70, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.section-nav-label {
+  flex: 0 0 auto;
+  color: #8a332c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section-nav {
+  flex-wrap: nowrap;
+  gap: 0.35rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.section-nav .nav-link {
+  flex: 0 0 auto;
+  padding: 0.45rem 0.7rem;
+  border-radius: 4px;
+  color: #36535a;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.section-nav .nav-link:hover,
+.section-nav .nav-link:focus {
+  color: #fffdf9;
+  background: #8a332c;
+}
+
+@media (max-width: 767px) {
+  .site-navbar .navbar-toggler {
+    display: none;
+  }
+
+  .section-nav-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-top: 0.75rem;
+  }
+
+  .section-nav {
+    width: 100%;
+  }
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .card-img-top {

@@ -4,29 +4,16 @@ import { Nav, NavLink } from "reactstrap";
 export default class Subnav extends React.Component {
   render() {
     return (
-      <div>
-        <Nav pills justified>
-          <NavLink className="text-danger" href="#africa">
-            Africa
-          </NavLink>
-          <NavLink className="text-danger" href="#asia-central">
-            Asia (Central)
-          </NavLink>{" "}
-          <NavLink className="text-danger" href="#asia-pacific">
-            Asia (Pacific)
-          </NavLink>{" "}
-          <NavLink className="text-danger" href="#asia-south">
-            Asia (South)
-          </NavLink>{" "}
-          <NavLink className="text-danger" href="#europe">
-            Europe
-          </NavLink>{" "}
-          <NavLink className="text-danger" href="#latin-america">
-            Latin America
-          </NavLink>{" "}
-          <NavLink className="text-danger" href="#middle-east">
-            Middle East
-          </NavLink>{" "}
+      <div className="section-nav-wrap">
+        <div className="section-nav-label">Jump to region</div>
+        <Nav pills className="section-nav" aria-label="Jump to region">
+          <NavLink href="#africa">Africa</NavLink>
+          <NavLink href="#asia-central">Asia (Central)</NavLink>{" "}
+          <NavLink href="#asia-pacific">Asia (Pacific)</NavLink>{" "}
+          <NavLink href="#asia-south">Asia (South)</NavLink>{" "}
+          <NavLink href="#europe">Europe</NavLink>{" "}
+          <NavLink href="#latin-america">Latin America</NavLink>{" "}
+          <NavLink href="#middle-east">Middle East</NavLink>{" "}
         </Nav>
       </div>
     );

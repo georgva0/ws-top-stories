@@ -1,31 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
 
 import {
   Navbar,
-  NavItem,
   NavbarToggler,
   Collapse,
-  NavLink,
   Nav,
   NavbarBrand,
   Container,
 } from "reactstrap";
 
 const Navigation = () => {
-  const location = useLocation();
-  const [url, setUrl] = useState(null);
-  useEffect(() => {
-    setUrl(location.pathname);
-  }, [location]);
-
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
     <Container>
-      <Navbar color="light" expand="md" light>
+      <Navbar className="site-navbar" expand="md" light>
         <NavbarBrand href="/" className="py-1">
-          <span className="mb-0 h1 text-danger">No1 WS articles</span>
+          <span className="brand-mark">No1</span>
+          <span className="brand-name">World Service top stories</span>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
