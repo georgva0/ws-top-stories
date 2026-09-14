@@ -111,6 +111,10 @@ const servicesURL = [
     serviceName: "Pashto",
   },
   {
+    serviceUrl: "dari",
+    serviceName: "Dari",
+  },
+  {
     serviceUrl: "punjabi",
     serviceName: "Punjabi",
   },
@@ -137,6 +141,14 @@ const servicesURL = [
   {
     serviceUrl: "polska",
     serviceName: "Polska",
+  },
+  {
+    serviceUrl: "romania",
+    serviceName: "Romania",
+  },
+  {
+    serviceUrl: "magyarul",
+    serviceName: "Hungarian",
   },
   {
     serviceUrl: "russian",
