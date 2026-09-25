@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import TopStoriesPage from "./pages/TopStoriesPage";
 import MostReadPage from "./pages/MostReadPage";
 import EmergingStoriesPage from "./pages/EmergingStories";
+import LatestArticles from "./pages/LatestArticles";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navbar";
 import ScrollButton from "./components/ScrollButton";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/top-stories" element={<TopStoriesPage />} />
         <Route path="/most-read" element={<MostReadPage />} />
         <Route path="/emerging-stories" element={<EmergingStoriesPage />} />
+        <Route path="/latest-articles" element={<LatestArticles />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Content />

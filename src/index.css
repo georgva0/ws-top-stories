@@ -52,6 +52,20 @@ body {
   font-size: 1.35rem;
 }
 
+.home-nav-link {
+  margin-right: 0.45rem;
+  border-radius: 4px;
+  color: #fffdf9 !important;
+  background: #3f7d5b;
+  font-weight: 700;
+}
+
+.home-nav-link:hover,
+.home-nav-link:focus {
+  color: #fffdf9 !important;
+  background: #2f6247;
+}
+
 .content-container > .row:first-child h5 {
   margin-top: 1.25rem !important;
   padding: 1rem 1.2rem !important;
@@ -68,6 +82,18 @@ body {
   font-weight: 700;
 }
 
+.latest-articles-banner {
+  border-left: 4px solid #36535a;
+  border-radius: 0 5px 5px 0;
+  background: #3f7d5b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.latest-article-headline--right {
+  text-align: right;
+}
+
 .content-container h3 {
   margin: 3rem 0 0.75rem;
   padding-top: 1.5rem;
@@ -81,6 +107,21 @@ body {
 
 .content-container .row.mt-3 {
   row-gap: 2.25rem;
+}
+
+.translation-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  color: #183f46;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.translation-toggle .form-check-input {
+  float: none;
+  margin: 0;
 }
 
 .content-container .card {
@@ -123,6 +164,10 @@ body {
   border-radius: 3px;
   font-size: 0.65rem;
   letter-spacing: 0.08em;
+}
+
+.content-container .card > .badge {
+  text-transform: uppercase;
 }
 
 .card-img-top {
@@ -179,6 +224,68 @@ body {
 .section-nav .nav-link:focus {
   color: #fffdf9;
   background: #8a332c;
+}
+
+.latest-articles-nav {
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+.latest-articles-nav .dropdown {
+  flex: 0 0 auto;
+}
+
+.latest-articles-nav .dropdown-toggle {
+  color: #36535a;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.latest-articles-nav .dropdown-toggle:hover,
+.latest-articles-nav .dropdown-toggle:focus,
+.latest-articles-nav .dropdown.show .dropdown-toggle {
+  color: #fffdf9;
+  background: #8a332c;
+}
+
+.latest-articles-nav .all-services-item {
+  color: #8a332c;
+  font-weight: 700;
+}
+
+.latest-articles-nav .dropdown-menu {
+  min-width: 12rem;
+  border: 1px solid #d9dfda;
+  border-radius: 4px;
+  background: #fffdf9;
+  box-shadow: 0 8px 18px rgba(24, 63, 70, 0.12);
+}
+
+.latest-articles-nav .dropdown-item {
+  color: #36535a;
+  font-size: 0.82rem;
+}
+
+.latest-articles-nav .dropdown-item:hover,
+.latest-articles-nav .dropdown-item:focus {
+  color: #fffdf9;
+  background: #183f46;
+}
+
+.card-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 3px;
+  background: #dfe5df;
+  color: #5b6e73;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 767px) {

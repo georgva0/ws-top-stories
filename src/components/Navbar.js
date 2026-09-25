@@ -7,6 +7,8 @@ import {
   Nav,
   NavbarBrand,
   Container,
+  NavItem,
+  NavLink,
 } from "reactstrap";
 
 const Navigation = () => {
@@ -22,6 +24,14 @@ const Navigation = () => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ms-auto" navbar>
+            <NavItem>
+              <NavLink href="/" className="home-nav-link">
+                Home
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/latest-articles">Latest articles</NavLink>
+            </NavItem>
             {/* <NavItem>
               <NavLink
                 href="/top-stories"

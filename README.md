@@ -1,3 +1,53 @@
+# World Service Top Stories
+
+A React app for browsing BBC World Service articles by region and service. Article data is loaded from MongoDB through a server-side API, with optional Google Translate headline translation.
+
+## Local development
+
+1. Copy `.env.example` to `.env` and fill in the credentials locally.
+2. Install dependencies:
+
+	```sh
+	npm install
+	```
+
+3. Start the API in one terminal:
+
+	```sh
+	npm run start:api
+	```
+
+4. Start the React app in another terminal:
+
+	```sh
+	npm start
+	```
+
+The React development server proxies `/api` requests to the local API on port 4000.
+
+## Production deployment
+
+The repository is configured for Netlify:
+
+- Build command: `npm run build`
+- Publish directory: `build`
+- Functions directory: `netlify/functions`
+- API route: `/api/latest-articles`
+
+In Netlify, add these environment variables under **Site configuration > Environment variables**:
+
+- `MONGO_DB_USERNAME`
+- `MONGO_DB_PASSWORD`
+- `GOOGLE_TRANSLATE_API_KEY`
+
+The `.env` file is ignored by Git and must never be committed. The Google Translate API key is used only by the server-side function.
+
+## Checks
+
+```sh
+npm run build
+npm test
+```
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
