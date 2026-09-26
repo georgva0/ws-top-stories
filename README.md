@@ -7,21 +7,21 @@ A React app for browsing BBC World Service articles by region and service. Artic
 1. Copy `.env.example` to `.env` and fill in the credentials locally.
 2. Install dependencies:
 
-	```sh
-	npm install
-	```
+   ```sh
+   npm install
+   ```
 
 3. Start the API in one terminal:
 
-	```sh
-	npm run start:api
-	```
+   ```sh
+   npm run start:api
+   ```
 
 4. Start the React app in another terminal:
 
-	```sh
-	npm start
-	```
+   ```sh
+   npm start
+   ```
 
 The React development server proxies `/api` requests to the local API on port 4000.
 
@@ -48,6 +48,7 @@ The `.env` file is ignored by Git and must never be committed. The Google Transl
 npm run build
 npm test
 ```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

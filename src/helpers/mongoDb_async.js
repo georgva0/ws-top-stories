@@ -27,7 +27,10 @@ const translateHeadlines = async (articles) => {
 
     const result = await response.json();
     const translations = result.data?.translations;
-    if (!Array.isArray(translations) || translations.length !== articles.length) {
+    if (
+      !Array.isArray(translations) ||
+      translations.length !== articles.length
+    ) {
       throw new Error("Google Translate returned an unexpected response");
     }
 
@@ -49,9 +52,14 @@ exports.getLatestArticles = async (
   const client = await MongoClient.connect(connectionString);
 
   try {
-    const serviceFilter = Array.isArray(serviceUrls) && serviceUrls.length
-      ? { $in: serviceUrls.map((serviceUrl) => new RegExp(`/${serviceUrl}$`, "i")) }
-      : null;
+    const serviceFilter =
+      Array.isArray(serviceUrls) && serviceUrls.length
+        ? {
+            $in: serviceUrls.map(
+              (serviceUrl) => new RegExp(`/${serviceUrl}$`, "i"),
+            ),
+          }
+        : null;
     const articles = await client
       .db("WorldServiceData")
       .collection("aresData")
@@ -87,8 +95,7 @@ exports.getLatestArticles = async (
         date: article.cmsNotificationTimestamp,
         service: article.passport?.home?.split("/").pop() || "World Service",
         headline: article.promo?.headlines?.seoHeadline || "",
-        image:
-          article.promo?.images?.defaultPromoImage?.model?.locator || null,
+        image: article.promo?.images?.defaultPromoImage?.model?.locator || null,
         url: article.promo?.locators?.canonicalUrl || null,
       }))
       .filter(
@@ -99,7 +106,9 @@ exports.getLatestArticles = async (
           /^https?:\/\//i.test(article.image),
       );
 
-        return translate ? await translateHeadlines(normalizedArticles) : normalizedArticles;
+    return translate
+      ? await translateHeadlines(normalizedArticles)
+      : normalizedArticles;
   } finally {
     await client.close();
   }

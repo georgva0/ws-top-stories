@@ -2,9 +2,8 @@ const { getLatestArticles } = require("../../src/helpers/mongoDb_async");
 
 exports.handler = async (event) => {
   try {
-    const serviceUrls = event.queryStringParameters?.services
-      ?.split(",")
-      .filter(Boolean) || [];
+    const serviceUrls =
+      event.queryStringParameters?.services?.split(",").filter(Boolean) || [];
     const translate = event.queryStringParameters?.translate !== "false";
     const articles = await getLatestArticles(24, serviceUrls, translate);
 

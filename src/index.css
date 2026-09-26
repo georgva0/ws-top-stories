@@ -152,6 +152,11 @@ body {
   line-height: 1.2;
 }
 
+.live-badge {
+  margin-right: 0.3rem;
+  vertical-align: 0.12em;
+}
+
 .content-container .card-subtitle {
   margin-top: auto;
   padding-top: 0.5rem;
@@ -309,4 +314,3 @@ code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-

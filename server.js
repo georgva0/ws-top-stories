@@ -4,14 +4,16 @@ const { getLatestArticles } = require("./src/helpers/mongoDb_async");
 const port = 4000;
 
 const server = http.createServer(async (req, res) => {
-  const requestUrl = new URL(req.url, `http://${req.headers.host || "localhost"}`);
+  const requestUrl = new URL(
+    req.url,
+    `http://${req.headers.host || "localhost"}`,
+  );
 
   if (requestUrl.pathname === "/api/latest-articles") {
     try {
-      const serviceUrls = requestUrl.searchParams
-        .get("services")
-        ?.split(",")
-        .filter(Boolean) || [];
+      const serviceUrls =
+        requestUrl.searchParams.get("services")?.split(",").filter(Boolean) ||
+        [];
       const translate = requestUrl.searchParams.get("translate") !== "false";
       const articles = await getLatestArticles(24, serviceUrls, translate);
       const normalized = articles.map((article) => ({

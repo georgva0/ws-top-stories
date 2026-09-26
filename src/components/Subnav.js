@@ -5,8 +5,8 @@ export default class Subnav extends React.Component {
   render() {
     return (
       <div className="section-nav-wrap">
-        <div className="section-nav-label">Jump to region</div>
-        <Nav pills className="section-nav" aria-label="Jump to region">
+        <div className="section-nav-label">Browse regions</div>
+        <Nav pills className="section-nav" aria-label="Browser regions">
           <NavLink href="#africa">Africa</NavLink>
           <NavLink href="#asia-central">Asia (Central)</NavLink>{" "}
           <NavLink href="#asia-pacific">Asia (Pacific)</NavLink>{" "}
