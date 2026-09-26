@@ -156,7 +156,7 @@ const TopStoriesPage = () => {
                       <CardTitle tag="h5">
                         {article[9]}
                         {article[1] && (
-                          <Badge ml-3 color="danger">
+                          <Badge ml-3 color="danger" className="live-badge">
                             {article[1]}
                           </Badge>
                         )}
@@ -213,7 +213,7 @@ const TopStoriesPage = () => {
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
                         {article[1] && (
-                          <Badge ml-3 color="danger">
+                          <Badge ml-3 color="danger" className="live-badge">
                             {article[1]}
                           </Badge>
                         )}
@@ -276,7 +276,7 @@ const TopStoriesPage = () => {
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
                         {article[1] && (
-                          <Badge ml-3 color="danger">
+                          <Badge ml-3 color="danger" className="live-badge">
                             {article[1]}
                           </Badge>
                         )}
@@ -335,7 +335,7 @@ const TopStoriesPage = () => {
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
                         {article[1] && (
-                          <Badge ml-3 color="danger">
+                          <Badge ml-3 color="danger" className="live-badge">
                             {article[1]}
                           </Badge>
                         )}
@@ -388,7 +388,7 @@ const TopStoriesPage = () => {
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
                         {article[1] && (
-                          <Badge ml-3 color="danger">
+                          <Badge ml-3 color="danger" className="live-badge">
                             {article[1]}
                           </Badge>
                         )}
@@ -441,7 +441,7 @@ const TopStoriesPage = () => {
                     <CardBody className="mx-0 px-0">
                       <CardTitle tag="h5">
                         {article[1] && (
-                          <Badge ml-3 color="danger">
+                          <Badge ml-3 color="danger" className="live-badge">
                             {article[1]}
                           </Badge>
                         )}
