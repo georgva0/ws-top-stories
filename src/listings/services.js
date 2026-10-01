@@ -69,6 +69,7 @@ const servicesURL = [
   {
     serviceUrl: "uzbek",
     serviceName: "Uzbek",
+    region: "Asia (Central)",
   },
   {
     serviceUrl: "burmese",
@@ -168,7 +169,7 @@ const servicesURL = [
   {
     serviceUrl: "azeri",
     serviceName: "Azeri",
-    region: "Asia (Central)",
+    region: "Europe",
   },
   {
     serviceUrl: "polska",
